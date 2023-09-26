@@ -19,3 +19,12 @@ do {
     console.log(`score is ${score}`)
       score + 2
 } while (score <=10);
+
+
+let score1 = 11
+do {
+    console.log(`score is ${score1}`)
+      score + 2
+} while (score1 <=10);
+
+
