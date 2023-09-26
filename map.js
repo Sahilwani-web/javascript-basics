@@ -13,3 +13,4 @@ const add = sum
            .map( (i) => i + 2 )
            .filter((i) => i >= 9 );
 console.log(add);           
+
