@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ,edit and remove</title>
+</head>
+<body style="background-color: black; color: #fff;">
+    <ul class="main">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function lang(langName) {
+      const li =   document.createElement('li');
+      li.innerHTML = `${langName}`
+      document.querySelector(".main").appendChild(li)
+        
+    }
+    lang("Python")
+    lang("Ruby")
+
+    function optilang(langName) {
+      const li =   document.createElement('li');
+      li.appendChild(document.createTextNode(langName))
+      document.querySelector(".main").appendChild(li)
+    }
+    optilang("Java")
+    optilang("PHP")
+
+
+    // edit 1st example
+    const thirdlang =  document.querySelector('li:nth-child(3)')
+    thirdlang.innerHTML = "Mojo"
+
+// 2nd example
+    const secondlang =  document.querySelector('li:nth-child(2)')
+    const newli  = document.createElement("li")
+    newli.textContent = "Node Js"
+    secondlang.replaceWith(newli)
+
+    // 3rd example
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    // remove example
+
+    const fourthLang = document.querySelector('li:nth-child(4)')
+    fourthLang.remove()
+
+
+
+</script>
+</html>
