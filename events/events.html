@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <ul id="list">
+        <li id="owl">owl </li>
+        <li id="orange"> Orange</li>
+        <li id="bear"> Bear</li>
+        <li id="Apple"> Apple</li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('owl').addEventListener('click' , function (e) {
+    //     alert('You clicked owl')
+        
+    // })
+
+    // document.getElementById('bear').addEventListener('click' , function (e) {
+    //     alert('You clicked bear')
+        
+    // })
+
+    // event bubbling and event propagation
+
+    document.getElementById('list').addEventListener('click' , function (e) {
+        
+        console.log('clicked inside the list')
+        
+    },false)
+
+    document.getElementById('bear').addEventListener('click' , function (e) {
+        console.log('you clicked bear');
+        e.stopPropagation()
+        
+    } , false)
+
+
+
+</script>
+</html>
